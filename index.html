@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+
+    <h1>Search for new and trending music videos in any country</h1>
+
+    <form class="formClass">
+        <section class="inputBox">
+            <label for="countryCode">Enter country name to generate list</label><br>
+            <br><input type="text" id="countryCode" name="countryCode" placeholder="Enter country abbreviation (i.e. US)" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter state abbr (i.e. CA)'"><br>
+            <br><label for="max-results">Maximum results to return</label><br>
+            <br><input type="number" name="max-results" id="js-max-results" value="10"></input><br>
+        </section>
+        <br><input type="submit" id="videoList" value="Submit">
+    </form>
+
+    <main>
+        <ul class="results hidden">
+            <div class="results-list">
+            </div>
+        </ul>
+    </main>
+    
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.js" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+</body>
+</html>
