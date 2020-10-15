@@ -1,19 +1,5 @@
 const apiKey = "AIzaSyAxrNszOXvLXh0MfTJLEdixjmfqNDM58mI";
 
-const azureApiKey = "118f45838c3046c5b087cd057e81a957";
-
-const azureEndPoint = "https://api.cognitive.microsofttranslator.com/";
-
-const intentoApiKey = "BEVrXOK0M4GHqoVVB2hmWJCFBGg4yF2F";
-
-const googleSearchApiKey = "AIzaSyAxrNszOXvLXh0MfTJLEdixjmfqNDM58mI";
-
-const googleBaseUrl = "https://www.googleapis.com/customsearch/v1?key=AIzaSyAxrNszOXvLXh0MfTJLEdixjmfqNDM58mI";
-
-const bingImageApi = "f1dcbed0ac4944bdb0fad99d818e731d";
-
-
-
 
 function getVideos(userInput, maxResults) {
     let capitalizedUserInput = (userInput).toUpperCase;
