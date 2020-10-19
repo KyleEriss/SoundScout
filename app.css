@@ -62,5 +62,7 @@ input[type=submit]:hover {
 
 ul {
     list-style: none;
-
+    color: whitesmoke;
+    font-family: 'Roboto', sans-serif;
+    font-size: 17px;
 }
