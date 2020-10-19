@@ -1,9 +1,7 @@
-const apiKey = "AIzaSyAxrNszOXvLXh0MfTJLEdixjmfqNDM58mI";
+const apiKey = "AIzaSyDI3LtrftD270t2w5lwybyA00RvJAB-51Q";
 
 
 function getVideos(userInput, maxResults) {
-    let capitalizedUserInput = (userInput).toUpperCase;
-    let twoLetterCode = "";
     for (let i = 0; i < countries.list.length; i++) {
        if (countries.list[i].name === userInput) {
             twoLetterCode = countries.list[i].code;
@@ -62,7 +60,11 @@ function watchForm() {
     $("form").on("click","#videoList", (event) => {
         event.preventDefault();
         $(".results-list").empty();
-        let userInput = document.getElementById("countryCode").value;
+        let str = document.getElementById("countryCode").value;
+        let res = str.charAt(0);
+        let capitalizeLetter = res.toUpperCase();
+        let revisedUserInput = str.slice(1);
+        let userInput = capitalizeLetter + revisedUserInput;
 		let maxResults = $('#js-max-results').val();
         getVideos(userInput, maxResults);
     });

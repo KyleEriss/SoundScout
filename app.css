@@ -1,3 +1,20 @@
+body {
+    background-image: url("images/recordPlayer1.jpeg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    text-align: center;
+    color: black;
+    font-family: 'Passion One', cursive;
+    font-size: 30px;
+}
+
+h1 {
+    font-family: 'Passion One', cursive;
+    font-size: 75px;
+    text-align: center;
+}
+
 input {
     margin-top: 20 px;
     padding: 12px 20px;
@@ -9,7 +26,7 @@ input {
 }
 
 form {
-    text-align: left;
+    text-align: center;
 }
 
 .formClass, h1 {
@@ -28,7 +45,16 @@ input[type=submit] {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
     font-weight: 900;
     letter-spacing: 1px;
+    transition-property: background, border-radius;
+    transition-duration: .2s, 1s;
+    transition-timing-function: linear;
 }
+
+input[type=submit]:hover {
+    background: black;
+    border-radius: 50%;
+  }
+  
 
 .hidden {
     display: none;
@@ -36,6 +62,5 @@ input[type=submit] {
 
 ul {
     list-style: none;
+
 }
-
-
