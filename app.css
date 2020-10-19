@@ -2,16 +2,16 @@ body {
     background-image: url("images/recordPlayer1.jpeg");
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-size: 100% 100%;
+    background-size: 350px 700px;
     text-align: center;
     color: black;
     font-family: 'Passion One', cursive;
-    font-size: 30px;
+    font-size: 20px;
 }
 
 h1 {
     font-family: 'Passion One', cursive;
-    font-size: 75px;
+    font-size: 30px;
     text-align: center;
 }
 
@@ -65,4 +65,30 @@ ul {
     color: whitesmoke;
     font-family: 'Roboto', sans-serif;
     font-size: 17px;
+}
+
+@media all and (min-width: 600px) {
+    body {
+        background-image: url("images/recordPlayer1.jpeg");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100% 100%;
+        text-align: center;
+        color: black;
+        font-family: 'Passion One', cursive;
+        font-size: 30px;
+    }
+
+    h1 {
+    font-family: 'Passion One', cursive;
+    font-size: 75px;
+    text-align: center;
+    }
+
+    ul {
+        list-style: none;
+        color: whitesmoke;
+        font-family: 'Roboto', sans-serif;
+        font-size: 17px;
+    }
 }
