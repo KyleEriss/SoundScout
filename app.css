@@ -2,7 +2,7 @@ body {
     background-image: url("images/recordPlayer1.jpeg");
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-size: 370px 500px;
+    background-size: 370px 100%;
     text-align: center;
     color: black;
     font-family: 'Passion One', cursive;
@@ -67,82 +67,111 @@ ul {
     font-size: 17px;
 }
 
+.videoWrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.videoWrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80%;
+    height: 80%;
+  }
+
 
 @media all and (min-width: 340px) {
     body {
-        background-image: url("images/recordPlayer1.jpeg");
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-size: 100% 100%;
-        text-align: center;
-        color: black;
-        font-family: 'Passion One', cursive;
-        font-size: 20px;
-    }
-
-    h1 {
-    font-family: 'Passion One', cursive;
-    font-size: 30px;
-    text-align: center;
-    }
-
-    ul {
-        list-style: none;
-        color: whitesmoke;
-        font-family: 'Roboto', sans-serif;
-        font-size: 17px;
+        background-size: 400px 100%;
     }
 }
 
 
 @media all and (min-width: 390px) {
     body {
-        background-image: url("images/recordPlayer1.jpeg");
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-size: 100% 100%;
-        text-align: center;
-        color: black;
-        font-family: 'Passion One', cursive;
-        font-size: 20px;
+        background-size: 500px 100%;
     }
 
-    h1 {
-    font-family: 'Passion One', cursive;
-    font-size: 30px;
-    text-align: center;
-    }
-
-    ul {
-        list-style: none;
-        color: whitesmoke;
-        font-family: 'Roboto', sans-serif;
-        font-size: 17px;
+    .videoWrapper iframe {
+        position: absolute;
+        width: 70%;
+        height: 70%;
     }
 }
 
-@media all and (min-width: 600px) {
+@media all and (min-width: 490px) {
     body {
-        background-image: url("images/recordPlayer1.jpeg");
-        background-repeat: no-repeat;
-        background-attachment: fixed;
+        background-size: 600px 100%;
+    }
+
+    .videoWrapper iframe {
+        position: absolute;
+        width: 60%;
+        height: 60%;
+    }
+}
+
+@media all and (min-width: 590px) {
+    body {
         background-size: 100% 100%;
-        text-align: center;
-        color: black;
-        font-family: 'Passion One', cursive;
-        font-size: 30px;
+        font-size: 25px;
     }
 
     h1 {
-    font-family: 'Passion One', cursive;
-    font-size: 75px;
-    text-align: center;
+    font-size: 35px;
     }
 
-    ul {
-        list-style: none;
-        color: whitesmoke;
-        font-family: 'Roboto', sans-serif;
-        font-size: 17px;
+    .videoWrapper iframe {
+        position: absolute;
+        width: 55%;
+        height: 55%;
+    }
+}
+
+@media all and (min-width: 700px) {
+    body {
+        background-size: 100% 100%;
+    }
+    
+    h1 {
+        font-size: 50px;
+    }
+
+    .videoWrapper iframe {
+        position: absolute;
+        width: 50%;
+        height: 50%;
+    }
+}
+
+@media all and (min-width: 1000px) {
+    body {
+        background-size: 100% 100%;
+    }
+    
+    h1 {
+        font-size: 65px;
+    }
+
+    .videoWrapper iframe {
+        position: absolute;
+        width: 40%;
+        height: 40%;
+    }
+}
+
+@media all and (min-width: 1200px) {
+    body {
+        background-size: 100% 100%;
+    }
+    
+    .videoWrapper iframe {
+        position: absolute;
+        width: 30%;
+        height: 30%;
     }
 }
