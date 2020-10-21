@@ -27,10 +27,6 @@ form {
     font-weight: 900;
 }
 
-.formClass, h1 {
-    margin: 40px;
-}
-
 input[type=submit] {
     background-color: black;
     border: none;
@@ -44,7 +40,6 @@ input[type=submit] {
     font-weight: 900;
     letter-spacing: 1px;
 }
-  
 
 .hidden {
     display: none;
@@ -52,20 +47,6 @@ input[type=submit] {
 
 ul {
     list-style: none;
-    color: whitesmoke;
-    font-family: 'Roboto', sans-serif;
-    font-size: 17px;
-}
-
-.videoWrapper {
-    position: absolute;
-    padding-bottom: 56.25%;
-    height: 0;
-    margin-left: auto;
-    margin-right: 200px;
-    width: 560px; 
-    height: 315px; 
-    
 }
 
 a:link, a:visited, a:hover, a:active {
@@ -77,23 +58,17 @@ a:link, a:visited, a:hover, a:active {
     body {
         background-size: 400px 100%;
     }
-}
 
     h1 {
-    font-size: 35px;
+        font-size: 35px;
     }
+}
 
 
 @media all and (min-width: 390px) {
     body {
         background-size: 500px 100%;
     }
-
-    /*.videoWrapper {
-        position: absolute;
-        width: 70%;
-        height: 70%;
-    }*/
 }
 
 @media all and (min-width: 490px) {
@@ -105,12 +80,6 @@ a:link, a:visited, a:hover, a:active {
         width: 327px;
         height: 184px;
     }
-
-    /*.videoWrapper {
-        position: absolute;
-        width: 60%;
-        height: 60%;
-    }*/
 }
 
 @media all and (min-width: 560px) {
@@ -122,23 +91,12 @@ a:link, a:visited, a:hover, a:active {
     h1 {
     font-size: 40px;
     }
-
-    /*.videoWrapper {
-        position: absolute;
-        width: 100%;
-    }*/
 }
 
 @media all and (min-width: 700px) {
     h1 {
         font-size: 50px;
     }
-
-    /*.videoWrapper {
-        position: absolute;
-        width: 50%;
-        height: 50%;
-    }*/
 }
 
 @media all and (min-width: 1000px) {
@@ -150,18 +108,4 @@ a:link, a:visited, a:hover, a:active {
         width: 560px;
         height: 315px;
     }
-
-    /*.videoWrapper {
-        position: absolute;
-        width: 40%;
-        height: 40%;
-    }*/
-}
-
-@media all and (min-width: 1200px) {
-    /*.videoWrapper {
-        position: absolute;
-        width: 30%;
-        height: 30%;
-    }*/
 }

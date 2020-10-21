@@ -1,13 +1,10 @@
-const apiKey = "AIzaSyBRPRd_vBZcveCCLZRWVdlCmyRjlmj3G0k";
-
-
 function getVideos(userInput, maxResults) {
     for (let i = 0; i < countries.list.length; i++) {
         if (countries.list[i].name === userInput) {
             twoLetterCode = countries.list[i].code;
         }
     }
-    let dynamicUrl = `https://www.googleapis.com/youtube/v3/videos?part=snippet&part=statistics&chart=mostPopular&maxResults=${maxResults}&regionCode=${twoLetterCode}&videoCategoryId=10&key=${apiKey}`;
+    let dynamicUrl = `https://www.googleapis.com/youtube/v3/videos?part=snippet&part=statistics&chart=mostPopular&maxResults=${maxResults}&regionCode=${twoLetterCode}&videoCategoryId=10&key=AIzaSyBRPRd_vBZcveCCLZRWVdlCmyRjlmj3G0k`;
     console.log(dynamicUrl);
     fetch(dynamicUrl)
         .then(handleErrors)
@@ -23,8 +20,6 @@ function getVideos(userInput, maxResults) {
         });
 }
 
-
-
 function handleErrors(response) {
     if (!response.ok) {
         let error = Error(response.statusText);
@@ -33,7 +28,6 @@ function handleErrors(response) {
     }
     return response;
 }
-
 
 function displayResults(responseJson, maxResults) {
     console.log(responseJson);
@@ -47,8 +41,6 @@ function displayResults(responseJson, maxResults) {
     }
     $(".results").removeClass("hidden");
 };
-
-
 
 function watchForm() {
     $("form").on("click", "#videoList", (event) => {
@@ -64,9 +56,7 @@ function watchForm() {
     });
 }
 
-
 $(watchForm)
-
 
 const countries = {
     list: [
