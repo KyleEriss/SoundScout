@@ -10,9 +10,7 @@ body {
 }
 
 h1 {
-    font-family: 'Passion One', cursive;
     font-size: 30px;
-    text-align: center;
 }
 
 input {
@@ -26,7 +24,7 @@ input {
 }
 
 form {
-    text-align: center;
+    font-weight: 900;
 }
 
 .formClass, h1 {
@@ -45,15 +43,7 @@ input[type=submit] {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
     font-weight: 900;
     letter-spacing: 1px;
-    transition-property: background, border-radius;
-    transition-duration: .2s, 1s;
-    transition-timing-function: linear;
 }
-
-input[type=submit]:hover {
-    background: black;
-    border-radius: 50%;
-  }
   
 
 .hidden {
@@ -68,23 +58,19 @@ ul {
 }
 
 .videoWrapper {
-    position: relative;
-    padding-bottom: 56.25%; /* 16:9 */
+    position: absolute;
+    padding-bottom: 56.25%;
     height: 0;
     margin-left: auto;
-    margin-right: auto;
+    margin-right: 200px;
     width: 560px; 
     height: 315px; 
     
 }
 
-/*.videoWrapper {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 80%;
-    height: 80%;
-}*/
+a:link, a:visited, a:hover, a:active {
+    color: rgb(252, 61, 4);
+}
 
 
 @media all and (min-width: 340px) {
@@ -103,23 +89,28 @@ ul {
         background-size: 500px 100%;
     }
 
-    .videoWrapper {
+    /*.videoWrapper {
         position: absolute;
         width: 70%;
         height: 70%;
-    }
+    }*/
 }
 
 @media all and (min-width: 490px) {
     body {
         background-size: 600px 100%;
     }
+    
+    iframe {
+        width: 327px;
+        height: 184px;
+    }
 
-    .videoWrapper {
+    /*.videoWrapper {
         position: absolute;
         width: 60%;
         height: 60%;
-    }
+    }*/
 }
 
 @media all and (min-width: 560px) {
@@ -132,10 +123,10 @@ ul {
     font-size: 40px;
     }
 
-    .videoWrapper {
+    /*.videoWrapper {
         position: absolute;
         width: 100%;
-    }
+    }*/
 }
 
 @media all and (min-width: 700px) {
@@ -143,11 +134,11 @@ ul {
         font-size: 50px;
     }
 
-    .videoWrapper {
+    /*.videoWrapper {
         position: absolute;
         width: 50%;
         height: 50%;
-    }
+    }*/
 }
 
 @media all and (min-width: 1000px) {
@@ -155,17 +146,22 @@ ul {
         font-size: 65px;
     }
 
-    .videoWrapper {
+    iframe {
+        width: 560px;
+        height: 315px;
+    }
+
+    /*.videoWrapper {
         position: absolute;
         width: 40%;
         height: 40%;
-    }
+    }*/
 }
 
 @media all and (min-width: 1200px) {
-    .videoWrapper {
+    /*.videoWrapper {
         position: absolute;
         width: 30%;
         height: 30%;
-    }
+    }*/
 }
