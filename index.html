@@ -6,21 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="app.css">
-    <!-- link to font -->
+    <!-- Link to font -->
     <link href="https://fonts.googleapis.com/css2?family=Passion+One:wght@700&display=swap" rel="stylesheet">
-    <!-- favicon -->
+    <!-- Favicon -->
     <link rel="shortcut icon" type="image/png" href="images/favicon.png">
 </head>
 
 <body>
 
     <!-- Title -->
-    <h1>Explore trending music videos worldwide</h1>
+    <h1>Explore Trending Music Videos Worldwide</h1>
 
     <!-- Form -->
     <form class="formClass">
         <section class="inputBox">
-            <label for="countryCode">Enter country name to generate list</label><br>
+            <label for="countryCode">Enter country to generate list</label><br>
             <br><input type="text" id="countryCode" name="countryCode" placeholder="Enter country (e.g. Russia)" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter country (e.g. Russia)'"><br>
             <br><label for="max-results">Maximum results to return</label><br>
             <br><input type="number" name="max-results" id="js-max-results" value="3"></input><br>
@@ -28,7 +28,7 @@
         <br><input type="submit" id="videoList" value="Submit">
     </form>
 
-    <!-- Video list embedded in main-->
+    <!-- Video list generated here-->
     <main>
         <ul class="results hidden">
             <div class="results-list">

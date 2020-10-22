@@ -10,6 +10,7 @@ body {
 }
 
 h1 {
+    font-family: 'Passion One', cursive;
     font-size: 30px;
 }
 
@@ -24,6 +25,7 @@ input {
 }
 
 form {
+    text-shadow: 1px 1px 0px white;
     font-weight: 900;
 }
 
