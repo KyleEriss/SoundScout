@@ -1,3 +1,4 @@
+// Dynamically generates URL for Fetch request. Calls displayResults to display videos and passes JSON response into that function.
 function getVideos(userInput, maxResults) {
     for (let i = 0; i < countries.list.length; i++) {
         if (countries.list[i].name === userInput) {
@@ -20,6 +21,7 @@ function getVideos(userInput, maxResults) {
         });
 }
 
+// Error checking function
 function handleErrors(response) {
     if (!response.ok) {
         let error = Error(response.statusText);
@@ -29,6 +31,7 @@ function handleErrors(response) {
     return response;
 }
 
+// Displays videos in HTML by iterating through the length of the JSON response.
 function displayResults(responseJson, maxResults) {
     console.log(responseJson);
     let resultItems = maxResults;
@@ -42,6 +45,8 @@ function displayResults(responseJson, maxResults) {
     $(".results").removeClass("hidden");
 };
 
+
+// Event listener collects user input and capitalizes the first letter of country. Then passes all user input into getVideos function.
 function watchForm() {
     $("form").on("click", "#videoList", (event) => {
         event.preventDefault();
@@ -56,8 +61,11 @@ function watchForm() {
     });
 }
 
+// Calling the initiating function
 $(watchForm)
 
+
+// Object with countries and corresponding codes
 const countries = {
     list: [
         { name: 'Afghanistan', code: 'AF' }, { name: 'Åland Islands', code: 'AX' }, { name: 'Albania', code: 'AL' }, { name: 'Algeria', code: 'DZ' }, { name: 'American Samoa', code: 'AS' },
