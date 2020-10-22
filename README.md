@@ -6,11 +6,11 @@ You can access the app here: https://kyleeriss.github.io/reconnaissound/
 
 Landing page:
 
-(screenshots/landingPage)
+(screenshots/landingPage.png)
 
 Video list:
 
-(screenshots/videoList)
+(screenshots/videoList.png)
 
 Technology used: HTML, CSS, JavaScript, jQuery
 
