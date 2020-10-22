@@ -5,7 +5,7 @@ function getVideos(userInput, maxResults) {
             twoLetterCode = countries.list[i].code;
         }
     }
-    let dynamicUrl = `https://www.googleapis.com/youtube/v3/videos?part=snippet&part=statistics&chart=mostPopular&maxResults=${maxResults}&regionCode=${twoLetterCode}&videoCategoryId=10&key=AIzaSyBRPRd_vBZcveCCLZRWVdlCmyRjlmj3G0k`;
+    let dynamicUrl = `https://www.googleapis.com/youtube/v3/videos?part=snippet&part=statistics&chart=mostPopular&maxResults=${maxResults}&regionCode=${twoLetterCode}&videoCategoryId=10&key=AIzaSyAjCo8BbejR0DtoFfoRP0hrJRray1EHD2g`;
     //console.log(dynamicUrl);
     fetch(dynamicUrl)
         .then(handleErrors)
