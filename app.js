@@ -6,7 +6,7 @@ K API: AIzaSyAjCo8BbejR0DtoFfoRP0hrJRray1EHD2g
 
 // Dynamically generates URL for Fetch request. Calls displayResults to display videos and passes JSON response into that function.
 function getVideos(twoLetterCode, maxResults) {
-    let dynamicUrl = `https://www.googleapis.com/youtube/v3/videos?part=snippet&part=statistics&chart=mostPopular&maxResults=${maxResults}&regionCode=${twoLetterCode}&videoCategoryId=10&key=AIzaSyBRPRd_vBZcveCCLZRWVdlCmyRjlmj3G0k`;
+    let dynamicUrl = `https://www.googleapis.com/youtube/v3/videos?part=snippet&part=statistics&chart=mostPopular&maxResults=${maxResults}&regionCode=${twoLetterCode}&videoCategoryId=10&key=AIzaSyAjCo8BbejR0DtoFfoRP0hrJRray1EHD2g`;
     //console.log(dynamicUrl);
     fetch(dynamicUrl)
         .then(handleErrors)
@@ -48,7 +48,7 @@ function displayResults(responseJson, maxResults) {
         resultItems = responseJson.items.length;
     }
     for (let i = 0; i < resultItems; i++) {
-        $('.results-list').append(`<br><li><iframe width="210" height="118" src="https://www.youtube.com/embed/${responseJson.items[i].id}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        $('.results-list').append(`<br><li><iframe width="210" height="118" src="https://www.youtube.com/embed/${responseJson.items[i].id}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             <br><h3><a href="https://www.youtube.com/watch?v=${responseJson.items[i].id}">${responseJson.items[i].snippet.title}</a></h3></li><br>`);
     }
     $(".results").removeClass("hidden");
