@@ -49,7 +49,7 @@ function displayResults(responseJson, maxResults) {
         resultItems = responseJson.items.length;
     }
     for (let i = 0; i < resultItems; i++) {
-        $('.results-list').append(`<br><li><iframe width="210" height="118" src="https://www.youtube.com/embed/${responseJson.items[i].id}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        $('.results-list').append(`<li><iframe width="210" height="118" src="https://www.youtube.com/embed/${responseJson.items[i].id}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             <h3><a href="https://www.youtube.com/watch?v=${responseJson.items[i].id}">${responseJson.items[i].snippet.title}</a></h3></li>`);
     }
     $(".results").removeClass("hidden");
