@@ -1,24 +1,33 @@
+/*
+N API: AIzaSyBRPRd_vBZcveCCLZRWVdlCmyRjlmj3G0k
+K API: AIzaSyAjCo8BbejR0DtoFfoRP0hrJRray1EHD2g
+*/
+
+
 // Dynamically generates URL for Fetch request. Calls displayResults to display videos and passes JSON response into that function.
-function getVideos(userInput, maxResults) {
-    for (let i = 0; i < countries.list.length; i++) {
-        if (countries.list[i].name === userInput) {
-            twoLetterCode = countries.list[i].code;
-        }
-    }
-    let dynamicUrl = `https://www.googleapis.com/youtube/v3/videos?part=snippet&part=statistics&chart=mostPopular&maxResults=${maxResults}&regionCode=${twoLetterCode}&videoCategoryId=10&key=AIzaSyAjCo8BbejR0DtoFfoRP0hrJRray1EHD2g`;
+function getVideos(twoLetterCode, maxResults) {
+    let dynamicUrl = `https://www.googleapis.com/youtube/v3/videos?part=snippet&part=statistics&chart=mostPopular&maxResults=${maxResults}&regionCode=${twoLetterCode}&videoCategoryId=10&key=AIzaSyBRPRd_vBZcveCCLZRWVdlCmyRjlmj3G0k`;
     //console.log(dynamicUrl);
     fetch(dynamicUrl)
         .then(handleErrors)
         .then(response => response.json())
         .then(responseJson => displayResults(responseJson, maxResults))
         .catch(error => {
-            if (error.missingName) {
-                alert("Sorry, GitHub not found. Please check spelling.");
-            }
-            else {
-                alert("Something went wrong, try again later.");
-            }
+            $(".results").removeClass("hidden");
+            return $(".results-list").append(`<br>Unexpected error. Please try again later.<br>`);
         });
+}
+
+// Country code function
+function countryCode(userInput, maxResults) {
+    for (let i = 0; i < countries.list.length; i++) {
+        if (countries.list[i].name === userInput) {
+            twoLetterCode = countries.list[i].code;
+            return getVideos(twoLetterCode, maxResults)
+        }
+    }
+    $(".results").removeClass("hidden");
+    return $(".results-list").append(`<br>Sorry, country name not found. Please check spelling.<br>`);
 }
 
 // Error checking function
@@ -39,7 +48,7 @@ function displayResults(responseJson, maxResults) {
         resultItems = responseJson.items.length;
     }
     for (let i = 0; i < resultItems; i++) {
-        $('.results-list').append(`<br><li><iframe width="210" height="118" src="https://www.youtube.com/embed/${responseJson.items[i].id}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        $('.results-list').append(`<br><li><iframe width="210" height="118" src="https://www.youtube.com/embed/${responseJson.items[i].id}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             <br><h3><a href="https://www.youtube.com/watch?v=${responseJson.items[i].id}">${responseJson.items[i].snippet.title}</a></h3></li><br>`);
     }
     $(".results").removeClass("hidden");
@@ -57,7 +66,7 @@ function watchForm() {
         let revisedUserInput = str.slice(1);
         let userInput = capitalizeLetter + revisedUserInput;
         let maxResults = $('#js-max-results').val();
-        getVideos(userInput, maxResults);
+        countryCode(userInput, maxResults);
     });
 }
 

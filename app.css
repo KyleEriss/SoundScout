@@ -7,6 +7,7 @@ body {
     color: black;
     font-family: 'Passion One', cursive;
     font-size: 20px;
+    text-shadow: 1px 1px 0px rgba(252, 136, 4, 0.993);
 }
 
 h1 {
@@ -25,7 +26,7 @@ input {
 }
 
 form {
-    text-shadow: 1px 1px 0px white;
+    /*text-shadow: 1px 1px 0px white;*/
     font-weight: 900;
 }
 
@@ -54,6 +55,7 @@ ul {
 a:link, a:visited, a:hover, a:active {
     color: rgb(252, 61, 4);
 }
+
 
 /* Media queries to make website responsive */
 @media all and (min-width: 340px) {
