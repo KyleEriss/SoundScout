@@ -1,12 +1,13 @@
 /*
 N API: AIzaSyBRPRd_vBZcveCCLZRWVdlCmyRjlmj3G0k
 K API: AIzaSyAjCo8BbejR0DtoFfoRP0hrJRray1EHD2g
+KY API: AIzaSyDI3LtrftD270t2w5lwybyA00RvJAB-51Q
 */
 
 
 // Dynamically generates URL for Fetch request. Calls displayResults to display videos and passes JSON response into that function.
 function getVideos(twoLetterCode, maxResults) {
-    let dynamicUrl = `https://www.googleapis.com/youtube/v3/videos?part=snippet&part=statistics&chart=mostPopular&maxResults=${maxResults}&regionCode=${twoLetterCode}&videoCategoryId=10&key=AIzaSyAjCo8BbejR0DtoFfoRP0hrJRray1EHD2g`;
+    let dynamicUrl = `https://www.googleapis.com/youtube/v3/videos?part=snippet&part=statistics&chart=mostPopular&maxResults=${maxResults}&regionCode=${twoLetterCode}&videoCategoryId=10&key=AIzaSyDI3LtrftD270t2w5lwybyA00RvJAB-51Q`;
     //console.log(dynamicUrl);
     fetch(dynamicUrl)
         .then(handleErrors)
@@ -14,7 +15,7 @@ function getVideos(twoLetterCode, maxResults) {
         .then(responseJson => displayResults(responseJson, maxResults))
         .catch(error => {
             $(".results").removeClass("hidden");
-            return $(".results-list").append(`<br>Unexpected error. Please try again later.<br>`);
+            return $(".results-list").append(`Unexpected error. Please try again later.`);
         });
 }
 
@@ -27,7 +28,7 @@ function countryCode(userInput, maxResults) {
         }
     }
     $(".results").removeClass("hidden");
-    return $(".results-list").append(`<br>Sorry, country name not found. Please check spelling.<br>`);
+    return $(".results-list").append(`Sorry, country name not found. Please check spelling.`);
 }
 
 // Error checking function
@@ -49,7 +50,7 @@ function displayResults(responseJson, maxResults) {
     }
     for (let i = 0; i < resultItems; i++) {
         $('.results-list').append(`<br><li><iframe width="210" height="118" src="https://www.youtube.com/embed/${responseJson.items[i].id}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <br><h3><a href="https://www.youtube.com/watch?v=${responseJson.items[i].id}">${responseJson.items[i].snippet.title}</a></h3></li><br>`);
+            <h3><a href="https://www.youtube.com/watch?v=${responseJson.items[i].id}">${responseJson.items[i].snippet.title}</a></h3></li>`);
     }
     $(".results").removeClass("hidden");
 };
