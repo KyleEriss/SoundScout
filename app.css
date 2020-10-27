@@ -52,6 +52,10 @@ ul {
     list-style: none;
 }
 
+iframe {
+    border: 0;
+}
+
 a:link, a:visited, a:hover, a:active {
     color: rgb(252, 61, 4);
 }
