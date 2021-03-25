@@ -7,7 +7,7 @@ KY API: AIzaSyDI3LtrftD270t2w5lwybyA00RvJAB-51Q
 
 // Dynamically generates URL for Fetch request. Calls displayResults to display videos and passes JSON response into that function.
 function getVideos(twoLetterCode, maxResults) {
-    let dynamicUrl = `https://www.googleapis.com/youtube/v3/videos?part=snippet&part=statistics&chart=mostPopular&maxResults=${maxResults}&regionCode=${twoLetterCode}&videoCategoryId=10&key=AIzaSyDI3LtrftD270t2w5lwybyA00RvJAB-51Q`;
+    let dynamicUrl = `https://www.googleapis.com/youtube/v3/videos?part=snippet&part=statistics&chart=mostPopular&maxResults=${maxResults}&regionCode=${twoLetterCode}&videoCategoryId=10&key=AIzaSyBRPRd_vBZcveCCLZRWVdlCmyRjlmj3G0k`;
     //console.log(dynamicUrl);
     fetch(dynamicUrl)
         .then(handleErrors)
